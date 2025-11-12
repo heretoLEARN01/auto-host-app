@@ -12,7 +12,7 @@ module.exports = {
   devServer: { port: 3000 },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: isProd ? (process.env.HOST_PUBLIC_PATH || '/') : 'auto',
+    publicPath: (process.env.HOST_PUBLIC_PATH || '/') ,
     filename: '[name].[contenthash].js',
     clean: true,
   },
