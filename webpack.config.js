@@ -23,8 +23,8 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'hostApp',
       remotes: {
-        customersApp: 'customersApp@http://localhost:3001/remoteEntry.js',
-        jobsApp: 'jobsApp@http://localhost:3002/remoteEntry.js',
+        customersApp: `customersApp@${customersUrl}`,
+        jobsApp: `jobsApp@${jobsUrl}`,
       },
       filename: 'remoteEntry.js',
       exposes: {
