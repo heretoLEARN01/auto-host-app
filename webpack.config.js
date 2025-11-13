@@ -9,7 +9,8 @@ const jobsUrl = process.env.JOBS_REMOTE || 'http://localhost:3002/remoteEntry.js
 module.exports = {
   entry: './src/index.tsx',
   mode: 'development',
-  devServer: { port: 3000 },
+  devServer: { port: 3000  ,static: path.join(__dirname, 'dist'),
+  historyApiFallback: true,},
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: (process.env.HOST_PUBLIC_PATH || '/') ,
